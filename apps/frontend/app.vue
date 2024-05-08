@@ -1,25 +1,32 @@
-<template>
-  <UContainer>
-    <UCard class="mt-10">
-      <template #header>
-        <div class="flex justify-between">
-          <h1>Welcome to Nuxt UI Starter</h1>
-          <ColorScheme
-            ><USelect
-              v-model="$colorMode.preference"
-              :options="['system', 'light', 'dark']"
-          /></ColorScheme>
-        </div>
-      </template>
-      <UButton icon="i-heroicons-book-open" to="https://ui.nuxt.com" target="_blank"
-        >Open Nuxt UI Documentation</UButton
-      >
-    </UCard>
-  </UContainer>
+<script setup lang="ts">
+import { useTheme } from 'vuetify'
+import ScrollToTop from '@core/components/ScrollToTop.vue'
+import initCore from '@core/initCore'
+import { initConfigStore, useConfigStore } from '@core/stores/config'
+import { hexToRgb } from '@layouts/utils'
 
-  <UContainer>
-    <UCard class="mt-10">
-      <NuxtPage />
-    </UCard>
-  </UContainer>
+const { global } = useTheme()
+
+// ℹ️ Sync current theme with initial loader theme
+initCore()
+initConfigStore()
+
+const configStore = useConfigStore()
+const { isMobile } = useDevice()
+if (isMobile)
+  configStore.appContentLayoutNav = 'vertical'
+</script>
+
+<template>
+  <VLocaleProvider :rtl="configStore.isAppRTL">
+    <!-- ℹ️ This is required to set the background color of active nav link based on currently active global theme's primary -->
+    <VApp :style="`--v-global-theme-primary: ${hexToRgb(global.current.value.colors.primary)}`">
+      <NuxtLayout>
+        <NuxtPage />
+        <NuxtLoadingIndicator color="rgb(var(--v-theme-primary))" />
+      </NuxtLayout>
+
+      <ScrollToTop />
+    </VApp>
+  </VLocaleProvider>
 </template>
