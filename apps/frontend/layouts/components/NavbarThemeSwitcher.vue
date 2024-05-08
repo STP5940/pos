@@ -4,7 +4,7 @@ import type { ThemeSwitcherTheme } from "@layouts/types";
 const themes: ThemeSwitcherTheme[] = [
   {
     name: "system",
-    icon: "tabler-device-laptop",
+    icon: "tabler-device-desktop-analytics",
   },
   {
     name: "light",
@@ -12,14 +12,14 @@ const themes: ThemeSwitcherTheme[] = [
   },
   {
     name: "dark",
-    icon: "tabler-moon",
+    icon: "tabler-moon-stars",
   },
 ];
 </script>
 
 <template>
-  <ColorScheme>
+  <!-- <ColorScheme>
     <USelect v-model="$colorMode.preference" :options="['system', 'light', 'dark']" />
-  </ColorScheme>
+  </ColorScheme> -->
   <ThemeSwitcher :themes="themes" />
 </template>

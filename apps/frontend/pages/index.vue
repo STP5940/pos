@@ -25,8 +25,6 @@ const showAlert = async (_Language: string) => {
         </a>
         to understand where to go from here and how to use our template.
         <br /><br />
-        <RButton class="mb-4" buttonText="Hello index" @click="showAlert(`React`)" />
-        <br />
         <VButton class="mb-4" buttonText="Hello index" @click="showAlert(`vue`)" />
         <br />
       </VCardText>

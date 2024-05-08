@@ -6,16 +6,10 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   modules: [
-    "@nuxt/ui",
-    "@nuxtjs/tailwindcss",
-    "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxtjs/device",
     "@pinia/nuxt",
   ],
-  colorMode: {
-    preference: "light",
-  },
   app: {
     head: {
       titleTemplate: "%s - NuxtJS Admin Template",
