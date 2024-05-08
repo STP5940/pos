@@ -57,56 +57,56 @@ watch(() => props.modelValue, () => {
         icon="tabler-bold"
         :color="editor.isActive('bold') ? 'primary' : 'default'"
         size="20"
-        @click="editor.chain().focus().toggleBold().run()"
+        @click="editor?.chain().focus().toggleBold().run()"
       />
 
       <VIcon
-        :color="editor.isActive('underline') ? 'primary' : 'default'"
+        :color="editor?.isActive('underline') ? 'primary' : 'default'"
         icon="tabler-underline"
         size="20"
-        @click="editor.commands.toggleUnderline()"
+        @click="editor?.commands.toggleUnderline()"
       />
 
       <VIcon
         :color="editor.isActive('italic') ? 'primary' : 'default'"
         icon="tabler-italic"
         size="20"
-        @click="editor.chain().focus().toggleItalic().run()"
+        @click="editor?.chain().focus().toggleItalic().run()"
       />
 
       <VIcon
         icon="tabler-strikethrough"
         size="20"
         :color="editor.isActive('strike') ? 'primary' : 'default'"
-        @click="editor.chain().focus().toggleStrike().run()"
+        @click="editor?.chain().focus().toggleStrike().run()"
       />
 
       <VIcon
         :color="editor.isActive({ textAlign: 'left' }) ? 'primary' : 'default'"
         icon="tabler-align-left"
         size="20"
-        @click="editor.chain().focus().setTextAlign('left').run()"
+        @click="editor?.chain().focus().setTextAlign('left').run()"
       />
 
       <VIcon
         icon="tabler-align-center"
         size="20"
         :color="editor.isActive({ textAlign: 'center' }) ? 'primary' : 'default'"
-        @click="editor.chain().focus().setTextAlign('center').run()"
+        @click="editor?.chain().focus().setTextAlign('center').run()"
       />
 
       <VIcon
         :color="editor.isActive({ textAlign: 'right' }) ? 'primary' : 'default'"
         icon="tabler-align-right"
         size="20"
-        @click="editor.chain().focus().setTextAlign('right').run()"
+        @click="editor?.chain().focus().setTextAlign('right').run()"
       />
 
       <VIcon
         :color="editor.isActive({ textAlign: 'justify' }) ? 'primary' : 'default'"
         icon="tabler-align-justified"
         size="20"
-        @click="editor.chain().focus().setTextAlign('justify').run()"
+        @click="editor?.chain().focus().setTextAlign('justify').run()"
       />
     </div>
 

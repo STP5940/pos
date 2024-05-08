@@ -4,7 +4,7 @@ import type { Notification } from '@layouts/types'
 
 interface Props {
   notifications: Notification[]
-  badgeProps?: unknown
+  badgeProps?: Record<string, any>;
   location?: any
 }
 interface Emit {

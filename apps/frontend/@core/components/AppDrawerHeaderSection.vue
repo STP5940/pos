@@ -3,7 +3,7 @@ interface Props {
   title: string
 }
 interface Emit {
-  (e: 'cancel', el: MouseEvent): void
+  (e: 'cancel', el?: MouseEvent): void
 }
 const props = defineProps<Props>()
 
