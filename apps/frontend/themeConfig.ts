@@ -1,20 +1,19 @@
-import { breakpointsVuetify } from '@vueuse/core'
+import { breakpointsTailwind, breakpointsBootstrapV5, breakpointsVuetifyV2, breakpointsVuetifyV3 } from '@vueuse/core'
 import { VIcon } from 'vuetify/components/VIcon'
 import { defineThemeConfig } from '@core'
 import { Skins } from '@core/enums'
 
 // ❗ Logo SVG must be imported with ?raw suffix
 import logo from '@images/logo.svg?raw'
-
 import { AppContentLayoutNav, ContentWidth, FooterType, NavbarType } from '@layouts/enums'
 
 export const { themeConfig, layoutConfig } = defineThemeConfig({
   app: {
-    title: 'vuexy',
+    title: 'v-pos',
     logo: h('div', { innerHTML: logo, style: 'line-height:0; color: rgb(var(--v-global-theme-primary))' }),
-    contentWidth: ContentWidth.Boxed,
-    contentLayoutNav: AppContentLayoutNav.Vertical,
-    overlayNavFromBreakpoint: breakpointsVuetify.md + 16, // 16 for scrollbar. Docs: https://next.vuetifyjs.com/en/features/display-and-platform/
+    contentWidth: ContentWidth.Fluid,
+    contentLayoutNav: AppContentLayoutNav.Horizontal,
+    overlayNavFromBreakpoint: breakpointsVuetifyV3.md + 16,
     i18n: {
       enable: false,
       defaultLocale: 'en',
@@ -56,9 +55,9 @@ export const { themeConfig, layoutConfig } = defineThemeConfig({
   },
 
   /*
-  // ℹ️  In below Icons section, you can specify icon for each component. Also you can use other props of v-icon component like `color` and `size` for each icon.
-  // Such as: chevronDown: { icon: 'tabler-chevron-down', color:'primary', size: '24' },
-  */
+    // ℹ️  In below Icons section, you can specify icon for each component. Also you can use other props of v-icon component like `color` and `size` for each icon.
+    // Such as: chevronDown: { icon: 'tabler-chevron-down', color:'primary', size: '24' },
+    */
   icons: {
     chevronDown: { icon: 'tabler-chevron-down' },
     chevronRight: { icon: 'tabler-chevron-right', size: 18 },

@@ -1,4 +1,9 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: "Meet Nuxt",
+  description: "The Intuitive Vue Framework.",
+});
+
 const showAlert = async (_Language: string) => {
   alert("Hello " + _Language);
 };
