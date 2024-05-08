@@ -8,6 +8,7 @@ import { useConfigStore } from '@core/stores/config'
 import { AppContentLayoutNav, ContentWidth } from '@layouts/enums'
 import { cookieRef, namespaceConfig } from '@layouts/stores/config'
 import { themeConfig } from '@themeConfig'
+import { useI18n } from "vue-i18n";
 
 import borderSkinDark from '@images/customizer-icons/border-dark.svg'
 import borderSkinLight from '@images/customizer-icons/border-light.svg'

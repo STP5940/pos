@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { I18nLanguage } from '@layouts/types'
+import { useI18n } from "vue-i18n";
 
 interface Props {
   languages: I18nLanguage[]
