@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "Meet Nuxt",
+  title: "Index",
   description: "The Intuitive Vue Framework.",
 });
 
