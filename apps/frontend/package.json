@@ -53,6 +53,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "@vite-pwa/nuxt": "0.7.0",
     "@antfu/eslint-config-vue": "^0.43.1",
     "@antfu/utils": "^0.7.6",
     "@fullcalendar/core": "^6.1.9",

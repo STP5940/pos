@@ -5,11 +5,50 @@ import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
-  modules: [
-    "@vueuse/nuxt",
-    "@nuxtjs/device",
-    "@pinia/nuxt",
-  ],
+  modules: ["@vite-pwa/nuxt", "@vueuse/nuxt", "@nuxtjs/device", "@pinia/nuxt"],
+  pwa: {
+    manifest: {
+      name: "PWA Nuxt 3",
+      short_name: "PposNuxt",
+      theme_color: "#8a8a5e",
+      description: "Vuexy NuxtJS Admin Template",
+      icons: [
+        {
+          src: "android-launchericon-48-48.png",
+          sizes: "48x48",
+          type: "image/png",
+        },
+        {
+          src: "android-launchericon-72-72.png",
+          sizes: "72x72",
+          type: "image/png",
+        },
+        {
+          src: "android-launchericon-69-69.png",
+          sizes: "69x69",
+          type: "image/png",
+        },
+        {
+          src: "android-launchericon-144-144.png",
+          sizes: "144x144",
+          type: "image/png",
+        },
+        {
+          src: "android-launchericon-192-192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "android-launchericon-512-512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+    },
+    workbox: {
+      navigateFallback: "/",
+    },
+  },
   app: {
     head: {
       titleTemplate: "%s - NuxtJS Admin Template",
