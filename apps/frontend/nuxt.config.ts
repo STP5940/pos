@@ -14,36 +14,17 @@ export default defineNuxtConfig({
       description: "Vuexy NuxtJS Admin Template",
       icons: [
         {
-          src: "android-launchericon-48-48.png",
-          sizes: "48x48",
-          type: "image/png",
-        },
-        {
-          src: "android-launchericon-72-72.png",
-          sizes: "72x72",
-          type: "image/png",
-        },
-        {
-          src: "android-launchericon-69-69.png",
-          sizes: "69x69",
-          type: "image/png",
-        },
-        {
-          src: "android-launchericon-144-144.png",
-          sizes: "144x144",
-          type: "image/png",
-        },
-        {
-          src: "android-launchericon-192-192.png",
           sizes: "192x192",
+          src: "icon192x192.png",
           type: "image/png",
         },
         {
-          src: "android-launchericon-512-512.png",
           sizes: "512x512",
+          src: "icon512x512.png",
           type: "image/png",
         },
       ],
+      lang: "th",
     },
     workbox: {
       navigateFallback: "/",
